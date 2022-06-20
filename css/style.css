@@ -6,6 +6,7 @@
 
 /* 배경 비디오 설정  */
 .back-video {
+  width: 100%;
   position: absolute;
   z-index: -1;
   right: 0;
