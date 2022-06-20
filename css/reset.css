@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap");
+
+/* 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", "Noto Sans KR", sans-serif;
+}
+
+/* 안티 에일리싱 */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  transform: rotate(0.01deg);
+  font-weight: 300;
+}
+
+.strong {
+  font-weight: 500;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+/* HEADER */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+  height: 60px;
+}
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+nav {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo:hover {
+  transition: 0.8s ease-out;
+
+  filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 5px #fff);
+}
+
+nav .logo a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  user-select: none;
+}
+
+nav .logo .icon {
+  color: #fff;
+  font-size: 28px;
+}
+
+nav .logo h1 {
+  padding-left: 4px;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+nav .nav-links ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav .nav-links ul li {
+  position: relative;
+  list-style: none;
+  padding-left: 40px;
+}
+
+nav .nav-links ul li a {
+  font-size: 16px;
+  color: #ccc;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+nav .nav-links ul li a .arrow {
+  position: relative;
+  font-size: 16px;
+  top: 2px;
+  transform: rotate(0deg);
+  transition: 0.5s;
+}
+
+nav .nav-links ul .more a .arrow.active {
+  transform: rotate(90deg);
+}
+nav .nav-links ul li:hover a {
+  color: #fff;
+  filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 5px #fff);
+}
+
+#sub-menu {
+  display: flex;
+  width: 200px;
+  flex-direction: column;
+  position: absolute;
+  top: 50px;
+  left: -12px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.8s ease-out;
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+
+#sub-menu li {
+  text-align: center;
+  padding: 20px 40px;
+  font-size: 32px;
+}
+
+#sub-menu li:last-child {
+  padding-bottom: 40px;
+}
+
+nav .nav-links ul .more:hover #sub-menu {
+  top: 40px;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s 0.1s;
+  box-shadow: 0px 8px 18px -6px rgba(24, 39, 75, 0.4),
+    0px 12px 42px -4px rgba(24, 39, 75, 0.4);
+}
+
+/* FOOTER */
+
+footer {
+  width: 100%;
+  height: 240px;
+  background: #000;
+  margin-top: 60px;
+}
+
+footer .container {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 2rem;
+  color: #fff;
+}
+
+footer .footer-title h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+footer .footer-lists h2 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+footer .footer-lists .footer-list {
+  margin-top: 20px;
+  font-size: 14px;
+}
+footer .footer-lists .footer-list li {
+  padding: 10px 0 10px 0;
+}
+
+footer .footer-copyright p {
+  font-size: 14px;
+}
+
+.footer-list {
+  list-style-type: none;
+}
