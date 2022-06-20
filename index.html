@@ -17,10 +17,10 @@
     />
   </head>
   <body>
+    <video muted autoplay loop plays-inline class="back-video">
+      <source src="video/nebula.mp4" />
+    </video>
     <div id="wrap">
-      <video muted autoplay loop plays-inline class="back-video">
-        <source src="video/nebula.mp4" />
-      </video>
       <header>
         <div class="container">
           <nav>
@@ -105,7 +105,7 @@
           -(mx / 20) +
           "deg)" +
           "rotateY(" +
-          -(my / 8) +
+          -(my / 10) +
           "deg)";
 
         window.requestAnimationFrame(loop);
